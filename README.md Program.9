@@ -1,0 +1,28 @@
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
+    namespace Program9
+    {
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // Объявляем массив силы ударов
+            int[] strikePowerLog = { 28, 35, 22, 40, 33 };
+
+            // Сортируем по возрастанию (Array.Sort меняет массив на месте)
+            Array.Sort(strikePowerLog);
+
+            Console.WriteLine("--- Сила ударов после сортировки (по возрастанию) ---");
+            foreach (var dmg in strikePowerLog)
+            {
+                Console.Write($"{dmg} ");
+            }
+            Console.WriteLine("\n");
+
+            Console.ReadKey(); // Чтобы консоль не закрылась сразу (можно убрать для автопроверки)
+        }
+        }
